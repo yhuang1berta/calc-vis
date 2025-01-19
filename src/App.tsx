@@ -59,7 +59,7 @@ export default function App() {
   >((n) => {
     search?.current?.clearInput();
     if (n) {
-      cosmograph.current?.selectNode(n);
+      cosmograph.current?.selectNode(n, true);
       setShowLabelsFor([n]);
       setSelectedNode(n);
     } else {
