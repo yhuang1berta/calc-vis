@@ -36,15 +36,15 @@ jobs:
 
       - name: Build Project
         run: |
-          CI=false yarn run build  # Temporarily bypass CI error handling
+          CI=false yarn run build
 
       - name: Get Id Token
         uses: actions/github-script@v6
         id: idtoken
         with:
            script: |
-               const coredemo = require('@actions/core')
-               return await coredemo.getIDToken()
+               const core = require('@actions/core')
+               return await core.getIDToken()
            result-encoding: string
 
       - name: Build And Deploy
