@@ -43,9 +43,8 @@ jobs:
         id: idtoken
         with:
           script: |
-            // Ensure 'core' is declared once
-            const core = require('@actions/core');
-            return await core.getIDToken();
+            const coredemo = require('@actions/core')
+            return await coredemo.getIDToken()
 
       - name: Build And Deploy
         id: builddeploy
